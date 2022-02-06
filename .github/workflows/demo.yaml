@@ -12,12 +12,7 @@ jobs:
       - run: echo "This is a build step"      # similar to "script" in GitLab
 
   test:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - run: echo "This is a test step"
-      
-        container_scanning:
+   container_scanning:
     runs-on: ubuntu-latest
     needs: test
     steps:
